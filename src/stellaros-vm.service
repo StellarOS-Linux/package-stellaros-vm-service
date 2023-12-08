@@ -1,0 +1,11 @@
+[Unit]
+Description=Stellar OS VM service
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/lib/stellaros/start-vm.fish
+ExecStop=/usr/lib/stellaros/save-vm.fish
+
+[Install]
+WantedBy=multi-user.target
